@@ -1,0 +1,154 @@
+/* =====================================================================
+   IFP.css - Mode Presentasi Interactive Flat Panel
+   Font besar, tombol sentuh besar, navigasi minimal.
+   ===================================================================== */
+
+:root {
+    --ifp-primary: #1552b8;
+    --ifp-dark: #0e2047;
+    --ifp-accent: #00a389;
+    --ifp-bg: #f4f7fb;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 20px; }
+
+body.ifp {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--ifp-bg);
+    color: #16213b;
+    line-height: 1.55;
+    overflow-x: hidden;
+}
+
+.ifp-top {
+    background: var(--ifp-dark);
+    color: #fff;
+    min-height: 86px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 12px 34px;
+}
+.ifp-top .brand {
+    display: flex; align-items: center; gap: 14px; flex: 1; min-width: 0;
+}
+.ifp-top .brand-mark {
+    width: 56px; height: 56px; border-radius: 14px;
+    background: linear-gradient(135deg, #2d7ff9, #00c2a2);
+    display: grid; place-items: center; font-weight: 900; font-size: 1.5rem;
+    flex: 0 0 auto;
+}
+.ifp-top h1 { font-size: 1.35rem; margin: 0; line-height: 1.2; }
+.ifp-top p { margin: 2px 0 0; font-size: .75rem; color: #a9c1ea; }
+.ifp-top .ifp-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.ifp-btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    min-height: 60px; min-width: 60px; padding: 12px 22px;
+    border: none; border-radius: 14px;
+    background: #fff; color: var(--ifp-dark);
+    font: inherit; font-size: 1rem; font-weight: 800; cursor: pointer;
+    text-decoration: none;
+}
+.ifp-btn:hover { text-decoration: none; filter: brightness(.96); }
+.ifp-btn.primary { background: var(--ifp-primary); color: #fff; }
+.ifp-btn.accent { background: var(--ifp-accent); color: #fff; }
+.ifp-btn.ghost { background: rgba(255,255,255,.14); color: #fff; border: 2px solid rgba(255,255,255,.35); }
+.ifp-btn.dark { background: var(--ifp-dark); color: #fff; }
+.ifp-btn.small { min-height: 52px; padding: 10px 16px; font-size: .85rem; }
+.ifp-btn:disabled { opacity: .45; cursor: not-allowed; }
+
+.ifp-body { padding: 28px 34px 110px; max-width: 1600px; margin: 0 auto; }
+.ifp-body.wide { max-width: none; }
+
+.ifp-hero {
+    background: linear-gradient(120deg, #1552b8, #0d3d90);
+    color: #fff; border-radius: 22px; padding: 34px 40px; margin-bottom: 28px;
+}
+.ifp-hero h2 { font-size: 2.1rem; margin: 0 0 10px; }
+.ifp-hero p { font-size: 1.05rem; max-width: 900px; opacity: .95; margin: 0; }
+
+.ifp-grid { display: grid; gap: 20px; }
+.ifp-grid.cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.ifp-grid.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.ifp-grid.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+.ifp-card {
+    background: #fff; border: 2px solid #dce5f2; border-radius: 20px;
+    padding: 26px; box-shadow: 0 4px 16px rgba(14,32,71,.07);
+}
+.ifp-card h3 { font-size: 1.35rem; margin: 0 0 10px; }
+.ifp-card p { font-size: 1rem; color: #4c5c78; }
+
+.ifp-menu {
+    display: flex; flex-direction: column; justify-content: center;
+    min-height: 180px; padding: 26px; border-radius: 20px;
+    background: #fff; border: 2px solid #dce5f2; color: #16213b;
+    text-decoration: none; font-size: 1.25rem; font-weight: 800;
+}
+.ifp-menu:hover { text-decoration: none; border-color: var(--ifp-primary); background: #eef4ff; }
+.ifp-menu .ico { font-size: 2.6rem; margin-bottom: 10px; }
+.ifp-menu small { display: block; font-size: .72rem; color: #62718e; font-weight: 600; margin-top: 6px; }
+
+.ifp-section-title {
+    display: flex; align-items: center; gap: 14px;
+    margin: 30px 0 16px; font-size: 1.4rem;
+}
+.ifp-section-title::after { content: ''; flex: 1; height: 2px; background: #dce5f2; }
+
+.ifp-slide {
+    background: #fff; border-radius: 22px; padding: 40px 48px;
+    border: 2px solid #dce5f2; min-height: 460px;
+}
+.ifp-slide h2 { font-size: 2rem; margin: 0 0 18px; }
+.ifp-slide h3 { font-size: 1.35rem; margin-top: 26px; color: var(--ifp-primary); }
+.ifp-slide p, .ifp-slide li { font-size: 1.15rem; line-height: 1.75; }
+.ifp-slide pre {
+    background: #101a30; color: #e2ecff; padding: 22px; border-radius: 14px;
+    overflow: auto; font-size: .95rem; font-family: Consolas, monospace;
+    white-space: pre-wrap; line-height: 1.6;
+}
+.ifp-slide .diagram-text {
+    background: #f0f5fd; border-left: 6px solid var(--ifp-primary);
+    padding: 22px; border-radius: 12px; white-space: pre-wrap;
+    font-family: Consolas, monospace; font-size: 1rem;
+}
+
+.ifp-footer {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 2px solid #dce5f2;
+    padding: 14px 34px; display: flex; align-items: center; gap: 14px;
+    box-shadow: 0 -4px 18px rgba(14,32,71,.08); z-index: 50;
+}
+.ifp-footer .slide-info { flex: 1; font-size: .9rem; color: #50607e; }
+.ifp-footer .slide-info strong { color: #16213b; }
+
+.ifp-step-box {
+    border: 2px solid #dce5f2; border-radius: 18px; padding: 24px;
+    background: #fff; min-height: 300px;
+}
+.ifp-step-box .step-num {
+    display: inline-grid; place-items: center; width: 52px; height: 52px;
+    border-radius: 50%; background: var(--ifp-primary); color: #fff;
+    font-size: 1.2rem; font-weight: 800; margin-bottom: 14px;
+}
+.ifp-step-box h3 { font-size: 1.5rem; }
+
+.ifp-badge { display: inline-block; padding: 6px 14px; border-radius: 30px; font-size: .78rem; font-weight: 800; background: #e7eefc; color: var(--ifp-primary); }
+.ifp-badge.green { background: #dff5ef; color: #08725f; }
+.ifp-badge.red { background: #fde7e7; color: #aa2222; }
+
+@media (max-width: 1200px) {
+    html { font-size: 18px; }
+    .ifp-grid.cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .ifp-grid.cols-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .ifp-body { padding: 20px 20px 100px; }
+    .ifp-slide { padding: 26px; }
+}
+@media (max-width: 760px) {
+    .ifp-grid.cols-4, .ifp-grid.cols-3, .ifp-grid.cols-2 { grid-template-columns: 1fr; }
+    .ifp-top { flex-wrap: wrap; padding: 12px 16px; }
+}

@@ -1,0 +1,20 @@
+# Log aplikasi
+storage/error.log
+*.log
+
+# Backup database hasil generate (script backup tetap ikut ter-commit)
+storage/backups/*.sql
+
+# File unggahan siswa
+storage/uploads/*
+!storage/uploads/.gitkeep
+
+# File sistem operasi
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
